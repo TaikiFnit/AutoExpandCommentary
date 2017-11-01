@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Expand Commentary for ぎゅっとe",
+  "version": "1.1",
+ 
+  "description": "ぎゅっとeのGrammarで問題に正答した時に出てくる解答を見るボタンを自動で押してくれるExtensionです",
+  
+  "icons": {
+    "48": "icons/icon@48.png",
+    "96": "icons/icon@96.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://yaruzo.gyuto-e.jp/*/lesson/choosecorrect.do"],
+      "js": ["grammarCommentaryExpand.js"]
+    }
+  ]
+}
